@@ -66,7 +66,7 @@ def main(seeds, tracking_uri):
                     "weight_decay": config["train_params"]["wd"]
                 }
                 #  One mlflow run over all seeds
-                database = MLFlowLogger(experiment_name=f'(2)-ideal-{ds}-v{variant}', tracking_uri=tracking_uri)
+                database = MLFlowLogger(experiment_name=f'low-dim-div-sampling', tracking_uri=tracking_uri)
                 run_id, output_path = database.init_experiment(hyper_parameters=settings)
                 output_path = pathlib.Path(output_path)
                 print(f"Started experiment: \n  - run_id: {run_id} \n  - queries: {_queries} \n  - rounds: {n_rounds} \n  - initials: {n_initials} \n  - architecture: {model_architecture}")

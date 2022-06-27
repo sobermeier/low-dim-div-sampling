@@ -15,7 +15,7 @@ class MLFlowLogger:
         self,
         tracking_uri: str,
         root: str = DATA_ROOT + '/experiments',
-        experiment_name: str = 'IDEAL'
+        experiment_name: str = 'low-dim-div-sampling'
     ):
         """
         Constructor.

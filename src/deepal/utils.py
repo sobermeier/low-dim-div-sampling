@@ -56,37 +56,3 @@ def str_list(v):
         return v
     return ast.literal_eval(v)
 
-
-def load_stats_for_run_and_round(out_dir, seeds):
-    df_per_seed = dict()
-    for seed in seeds:
-        dfs_paths = glob.glob(out_dir + '/' + str(seed) + '/*.csv')
-        if len(dfs_paths) == 0:
-            return None
-        dfs = []
-        for df_path in dfs_paths:
-            iteration = df_path.split("/")[-1].split("_")[0]
-            tmp_df = pd.read_csv(df_path)
-            tmp_df["iteration"] = int(iteration)
-            dfs.append(tmp_df)
-        df_per_seed[seed] = pd.concat(dfs[::-1], ignore_index=True)
-    return df_per_seed
-
-
-def load_stats_for_run(out_dir, seeds):
-    df_per_seed = dict()
-    for seed in seeds:
-        dfs_paths = glob.glob(out_dir + '/' + str(seed) + '/*.csv')
-        if len(dfs_paths) == 0:
-            return None
-        dfs = []
-        for df_path in dfs_paths:
-            dfs.append(pd.read_csv(df_path))
-        df_per_seed[seed] = pd.concat(dfs[::-1], ignore_index=True)
-    return df_per_seed
-
-
-def filter_df(filters, df):
-    for f in filters:
-        df = df[df[f[0]] == f[1]]
-    return df
