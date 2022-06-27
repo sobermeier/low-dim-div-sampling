@@ -1,0 +1,12 @@
+--extra-index-url https://download.pytorch.org/whl/cu113
+torch
+torchvision
+mlflow
+numpy
+pandas
+scikit-learn
+scipy
+click
+tqdm
+matplotlib
+seaborn

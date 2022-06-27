@@ -1,0 +1,30 @@
+{
+  "model_architecture": "linear",
+  "model_params": {
+    "output_dim": 10,
+    "input_dims": [28, 28, 1],
+    "linear_hidden_dims": [256],
+    "p_drop": null
+  },
+  "train_params": {
+    "lr": 0.01,
+    "epochs": 10,
+    "wd": 0
+  },
+  "al_params": {
+    "n_queries": [100],
+    "n_initials": [100],
+    "budget": 2500
+  },
+  "ds_params": {
+    "dims": [28, 28, 1],
+    "loader_tr_args": {
+      "batch_size": 64,
+      "num_workers": 0
+    },
+    "loader_te_args": {
+      "batch_size": 1000,
+      "num_workers": 0
+    }
+  }
+}
