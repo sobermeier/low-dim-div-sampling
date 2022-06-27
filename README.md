@@ -9,7 +9,8 @@ We compare the following diversity sampling methods:
 The diversity concepts are popular choices for various active learning strategies.
 We execute the three methods on latent features, pca reduced features and on the probability vectors each.
 Our results show that using the output probabilities greatly reduces acquisition times and at the same time increases label efficiency.
- 
+
+![](notebooks/100_[256].png)
 
 This repository is built on [Kuan-Hao Huang's DeepAL repository](https://github.com/ej0cl6/deep-active-learning) and [Jordan Ash's BADGE repository](https://github.com/JordanAsh/badge) 
 
