@@ -12,5 +12,5 @@ def get_strategy(name, x, y, labelled, model, d_handler, d_args):
         return instance, strategy_params
     else:
         print("Strategy not found")
-        raise NotImplementedError()
+        raise NotImplementedError
 

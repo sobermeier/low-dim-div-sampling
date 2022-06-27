@@ -15,14 +15,14 @@ def get_transform(name):
     if name == 'MNIST':
         return transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))])
     else:
-        raise NotImplementedError()
+        raise NotImplementedError
 
 
 def get_dataset(name, path=DATASET_PATH):
     if name == 'MNIST':
         return get_MNIST(path)
     else:
-        raise NotImplementedError()
+        raise NotImplementedError
 
 
 def get_MNIST(path):
@@ -44,7 +44,7 @@ def get_handler(name):
     if name == 'MNIST':
         return MNISTHandler
     else:
-        raise NotImplementedError()
+        raise NotImplementedError
 
 
 class MNISTHandler(Dataset):

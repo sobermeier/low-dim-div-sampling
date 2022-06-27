@@ -28,7 +28,7 @@ pip install -r requirements.txt
 We assume that an mlflow instance is running at ```TRACKING_URI```.
 
 ## Run Experiments
-Start the experiment using the script ```executables/run_x.py```:
+Start the experiment using the script ```executables/run_v.py```:
 
 ```
 (venv) PYTHONPATH=. python executables/run_v.py --tracking_uri=${TRACKING_URI}

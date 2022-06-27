@@ -3,7 +3,6 @@ import os
 import pathlib
 import statistics
 import time
-from copy import deepcopy
 
 import click
 import numpy as np

@@ -8,4 +8,4 @@ def get_net(
     if model_architecture == "linear":
         return LinearSeq
     else:
-        raise NotImplementedError()
+        raise NotImplementedError
